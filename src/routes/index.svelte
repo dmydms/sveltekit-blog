@@ -1,15 +1,15 @@
 <script lang="ts">
     import type { ArticleMeta } from '$lib/types'
 
-    export let posts: ArticleMeta[] = [] 
+    export let posts: ArticleMeta[] = []
 </script>
 
 <svelte:head>
-    <title>웹사이트 제목</title>
+    <title>Dahyun's Dev Blog</title>
     <meta name="description" content="웹사이트 설명" />
 </svelte:head>
 
-<h1>웹사이트 제목</h1>
+<h1>Dahyun's Dev Blog</h1>
 
 <ul class="posts">
     {#each posts as post}
