@@ -1,9 +1,10 @@
+import type { ArticleMeta } from "$lib/types"
 import type { RequestHandler } from "@sveltejs/kit"
 import fs from 'fs'
 import yaml from 'js-yaml'
 
 export const get: RequestHandler = async () => {
-    const posts = await getArticleMetas('src/routs/posts')
+    const posts = await getArticleMetas('src/routes/posts')
     return {
         body: { posts },
     }
@@ -23,3 +24,4 @@ export async function getArticleMeta(dir: string, id: string): Promise<ArticleMe
     const content = (await fs.promises.readFile(`${dir}/${id}.md`)).toString()
     const frag = content.substring(4, content.indexOf('---\n', 4)).trim()
     return { id, ...(yaml.load(frag) as Record<string, string>) } as ArticleMeta
+}
