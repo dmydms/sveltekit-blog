@@ -5,11 +5,12 @@
 </script>
 
 <svelte:head>
-    <title>Dahyun's Dev Blog</title>
-    <meta name="description" content="웹사이트 설명" />
+    <title>개발하는 다현</title>
+    <meta name="description" content="안녕하세요! 제품 개발자 김다현입니다.🙋‍♀️" />
 </svelte:head>
 
-<h1>Dahyun's Dev Blog</h1>
+<h1>블로그</h1>
+<p>생각, 회고, 개발 이야기 등을 기록합니다.</p>
 
 <ul class="posts">
     {#each posts as post}

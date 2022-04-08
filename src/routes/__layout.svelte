@@ -4,8 +4,9 @@
 
 <nav class="gnb">
     <ul>
-      <li><a href="/">블로그 홈</a></li>
-      <li><a href="/posts/hello">소개</a></li>
+      <li><a href="/">🏠</a></li>
+      <li><a href="/posts/TIL">오늘을 기록해요.</a></li>
+      <li><a href="/posts/introduce">저는 누굴까요?</a></li>
     </ul>
 </nav>
 
