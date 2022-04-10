@@ -24,7 +24,7 @@
     top: -8em;
 	}
 	:global(:root.dark-mode) button {
-		background-color: var(--c-bg);
-		color: black;
+		background-color: var(--dark-c-accent);
+		color: var(--dark-c-bg);
 	}
 </style>
