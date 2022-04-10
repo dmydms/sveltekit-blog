@@ -1,5 +1,6 @@
 <script lang="ts">
-    import '$lib/css/root.css'
+  import DarkmodeButton from '$components/DarkmodeButton.svelte';
+  import '$lib/css/root.css'
 </script>
 
 <nav class="gnb">
@@ -13,6 +14,8 @@
 <main>
     <slot />
 </main>
+
+<DarkmodeButton>Darkmode</DarkmodeButton>
 
 <style lang="postcss">
   .gnb {

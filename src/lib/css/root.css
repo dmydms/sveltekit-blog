@@ -6,6 +6,9 @@
   --c-fg: #1c2837;
   --c-bg: #d5d9d4;
 
+  --dark-c-bg: #04293A;
+  --dark-c-accent: #ECB365;
+
   max-width: 40em;
   padding: 1em;
   margin: 8em auto;
@@ -16,11 +19,24 @@
   font-size: 16px;
   line-height: 1.8;
   word-break: keep-all;
+  position: relative;
+}
+
+:root.dark-mode {
+  background-color: var(--dark-c-bg);
+  color: rgb(220, 220, 220);
+  accent-color: var(--dark-c-accent);
 }
 
 a {
   border-bottom: 1px solid var(--c-accent);
   color: var(--c-accent);
+  text-decoration: none;
+}
+
+:root.dark-mode a {
+  border-bottom: 1px solid var(--dark-c-accent);
+  color: var(--dark-c-accent);
   text-decoration: none;
 }
 
