@@ -6,6 +6,7 @@ import rehypeSlug from 'rehype-slug'
 import remarkAbbr from 'remark-abbr'
 import preprocess from 'svelte-preprocess'
 import { fileURLToPath } from 'url'
+import { visit } from 'unist-util-visit'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -27,7 +28,21 @@ const config = {
         dashes: 'oldschool',
       },
       remarkPlugins: [remarkAbbr],
-      rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]],
+      rehypePlugins: [
+        rehypeSlug,
+        [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+        () => {
+          // Attach "sveltekit:prefetch" to internal links
+          return tree => {
+            const pInnerLink = /^(\/|\.) /
+            visit(tree, 'element', node => {
+              if (node.tagName !== 'a') return
+              if (!node.properties.href.match(pInnerLink)) return
+              node.properties['sveltekit:prefetch'] = 'sveltekit:prefetch'
+            })
+          }
+        },
+      ],
       layout: {
         _: path.join(__dirname, './src/components/LayoutDefault.svelte'),
       },
