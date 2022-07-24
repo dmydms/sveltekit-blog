@@ -35,10 +35,27 @@
   </div>
 </div>
 
-<h2 class="section-title">좋아하는 음악</h2>
-<p>양인모님의 Histoire du Tango: III. Nightclub 1960을 가장 좋아해요.</p>
+<h2 class="section-title">좋아하는 음악 🎵</h2>
+<ul class="musics">
+  <li>
+    <h3>
+      <a href="https://youtu.be/WLgYIbDY9ds?t=671">양인모, Histoire du Tango: III. Nightclub 1960</a
+      >
+    </h3>
+    <p>
+      그저 그랬던 곡이였는데, 인천에서 열린 양인모님의 리사이틀에 갔다가 반하게 되었던 곡이에요.
+      정열적인 음색들과 팽팽한 현의 소리가 매력적인 곡입니다.
+    </p>
+  </li>
+  <li>
+    <h3>
+      <a href="https://www.youtube.com/watch?v=g4uWEaZqP1w">어반자카파, Get</a>
+    </h3>
+    <p>남 눈치 많이보는 제게 힘이 되어주는 노래에요. 가끔 가사 들으면서 용기를 얻는 노래!</p>
+  </li>
+</ul>
 
-<h2 class="section-title">좋아하는 술</h2>
+<h2 class="section-title">좋아하는 술 🥃</h2>
 <ul class="drinks">
   <li>
     <h3>
@@ -95,7 +112,10 @@
     margin-bottom: 0.2em;
   }
 
-  .drinks {
+  .drinks,
+  .musics {
+    margin-bottom: 3em;
+
     h3 {
       margin: 0 0 0.2em;
     }
