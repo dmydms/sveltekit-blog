@@ -5,7 +5,7 @@ import yaml from 'js-yaml'
 import type { ArticleMeta } from '$lib/types'
 
 export const get: RequestHandler = async () => {
-  const posts = await getArticleMetas('src/routes/posts')
+  const posts = await getArticleMetas(`src/routes/posts/blog`)
   return {
     body: { posts },
   }
