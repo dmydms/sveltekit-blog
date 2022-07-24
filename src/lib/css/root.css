@@ -5,27 +5,26 @@
   --c-accent-bg: #c9aba7;
   --c-fg: #1c2837;
   --c-bg: #d5d9d4;
-
   --dark-c-bg: #04293A;
   --dark-c-accent: #ECB365;
 
+  position: relative;
   max-width: 40em;
   padding: 1em;
-  margin: 8em auto;
+  margin: 4em auto;
   accent-color: var(--c-accent);
   background-color: var(--c-bg);
   color: var(--c-fg);
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.8;
   word-break: keep-all;
-  position: relative;
 }
 
 :root.dark-mode {
-  background-color: var(--dark-c-bg);
-  color: rgb(220, 220, 220);
   accent-color: var(--dark-c-accent);
+  background-color: var(--dark-c-bg);
+  color: rgb(220 220 220);
 }
 
 a {
@@ -45,9 +44,15 @@ a {
   color: var(--c-bg);
 }
 
+ul {
+  position: relative;
+  padding-left: 0;
+  list-style-type: none;
+}
+
 @media (min-width: 60em) {
   :root {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -58,7 +63,6 @@ a {
 }
 
 article.post {
-
   h1,
   h2,
   h3,
@@ -110,10 +114,11 @@ article.post {
     border-radius: 0.25rem;
     font-size: 0.8em;
 
-    /* 기본값은 배경과의 차이가 지나치게 적음 */
-    .token.comment {
-      color: #7B7;
-    }
+  }
+
+  /* 기본값은 배경과의 차이가 지나치게 적음 */
+  .token.comment {
+    color: #7B7;
   }
 
   blockquote> :first-child {
@@ -126,7 +131,6 @@ article.post {
 
   ul {
     position: relative;
-    padding-left: 1em;
     list-style-type: none;
   }
 
@@ -152,3 +156,4 @@ article.post {
     font-family: monospace;
   }
 }
+
